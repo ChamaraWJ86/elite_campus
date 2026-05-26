@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert IELTS preparation in Sri Lanka. Achieve your target band score with personalized coaching.">
+    <title>IELTS Preparation Sri Lanka | Expert IELTS Teacher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ielts-red': '#E31837',
+                        'ielts-dark': '#1a1a1a',
+                        'ielts-gray': '#f5f5f5',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+        .hero-fullscreen {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-fullscreen::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(227,24,55,0.7)),
+                              url('teacher_photo.jpg');
+            background-position: center -100px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+            transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+        }
+        @media (min-width: 768px) {
+            .hero-fullscreen::before {
+                background-attachment: fixed;
+                background-position: center center;
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .parallax-section {
+            position: relative;
+            overflow: hidden;
+        }
+        .parallax-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #E31837 100%);
+            z-index: -1;
+        }
+        .flip-photo {
+            transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Transparent Fixed Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-transparent transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-1">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="index.html">
+                        <img src="Logo.png" alt="Right Direction IELTS" class="h-24 md:h-28">
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <ul id="nav-menu" class="hidden md:flex space-x-8 text-white font-semibold">
+                    <li><a href="index.html" class="hover:text-ielts-red transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-ielts-red transition">About</a></li>
+                    <li><a href="courses.html" class="hover:text-ielts-red transition">Courses</a></li>
+                    <li><a href="resources.html" class="hover:text-ielts-red transition">Resources</a></li>
+                    <li><a href="success.html" class="hover:text-ielts-red transition">Success</a></li>
+                    <li><a href="contact.html" class="hover:text-ielts-red transition">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-md">
+                <li><a href="index.html" class="block py-2 text-black font-semibold">Home</a></li>
+                <li><a href="about.html" class="block py-2 text-black hover:text-ielts-red transition">About</a></li>
+                <li><a href="courses.html" class="block py-2 text-black hover:text-ielts-red transition">Courses</a></li>
+                <li><a href="resources.html" class="block py-2 text-black hover:text-ielts-red transition">Resources</a></li>
+                <li><a href="success.html" class="block py-2 text-black hover:text-ielts-red transition">Success</a></li>
+                <li><a href="contact.html" class="block py-2 text-black hover:text-ielts-red transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Full-Screen Hero -->
+    <section class="hero-fullscreen flex items-end md:items-center justify-start text-white relative">
+        <div class="container mx-auto px-6 sm:px-8 pb-48 md:pb-0 text-left fade-in-up">
+            <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-2">
+                IELTS
+            </h1>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-2">
+                Master Class
+            </h2>
+            <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-6">By Suneetha Govinda</p>
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 max-w-3xl font-light">
+                Expert guidance with customised training
+            </p>
+        </div>
+        <!-- CTA Button - Centered Above Arrow -->
+        <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2">
+            <a href="contact.html" class="bg-white bg-opacity-20 backdrop-blur-md text-white px-6 sm:px-12 py-4 sm:py-5 text-base sm:text-xl font-bold hover:bg-ielts-red hover:text-white transition inline-block whitespace-nowrap rounded-lg md:bg-ielts-red md:backdrop-blur-none">
+                START YOUR JOURNEY
+            </a>
+        </div>
+        <!-- Down Arrow -->
+        <div id="hero-arrow" class="absolute bottom-12 left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+            <svg class="w-8 h-8 animate-bounce text-ielts-red md:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+                <div class="sm:border-r border-gray-300 pb-6 sm:pb-0">
+                    <p class="text-4xl sm:text-5xl font-bold text-ielts-red mb-2">95%</p>
+                    <p class="text-gray-600 font-semibold">Success Rate</p>
+                </div>
+                <div class="sm:border-r border-gray-300 pb-6 sm:pb-0">
+                    <p class="text-4xl sm:text-5xl font-bold text-ielts-red mb-2">500+</p>
+                    <p class="text-gray-600 font-semibold">Students</p>
+                </div>
+                <div>
+                    <p class="text-4xl sm:text-5xl font-bold text-ielts-red mb-2">8.5</p>
+                    <p class="text-gray-600 font-semibold">Avg Score</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Large Image -->
+    <section class="py-16 md:py-24 bg-ielts-gray">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center max-w-6xl mx-auto">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-ielts-dark mb-4 md:mb-6">Expert IELTS Instructor</h2>
+                    <h3 class="text-xl md:text-2xl font-bold text-ielts-red mb-4">[Teacher Name]</h3>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        With over [X] years of experience, I specialize in helping students achieve their target IELTS band scores through personalized coaching and proven strategies.
+                    </p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-ielts-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 text-lg">Certified IELTS Instructor</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-ielts-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 text-lg">Band 9.0 Certified</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-ielts-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 text-lg">[X]+ Years Experience</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="bg-ielts-red text-white px-8 py-4 rounded-lg font-bold hover:bg-red-700 transition inline-block">
+                        LEARN MORE
+                    </a>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="teacher_photo.jpg" alt="IELTS Instructor" class="w-full rounded-lg shadow-2xl flip-photo object-cover" style="object-position: 60% center;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses - Full Width Cards -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-ielts-dark mb-4">IELTS Courses</h2>
+                <p class="text-lg md:text-xl text-gray-600">Choose the program that fits your goals</p>
+            </div>
+            <div class="space-y-6 md:space-y-8 max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8 items-center bg-ielts-gray p-6 md:p-10 rounded-lg hover:shadow-xl transition">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-ielts-dark mb-2">Complete IELTS</h3>
+                        <p class="text-gray-600">All modules covered</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-700 mb-4">Comprehensive training covering Listening, Reading, Writing, and Speaking with full practice materials.</p>
+                        <a href="courses.html" class="text-ielts-red font-bold hover:underline">EXPLORE COURSE →</a>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8 items-center bg-ielts-gray p-6 md:p-10 rounded-lg hover:shadow-xl transition">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-ielts-dark mb-2">One-on-One</h3>
+                        <p class="text-gray-600">Personal coaching</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-700 mb-4">Personalized attention with customized study plans tailored to your specific needs and timeline.</p>
+                        <a href="courses.html" class="text-ielts-red font-bold hover:underline">EXPLORE COURSE →</a>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8 items-center bg-ielts-gray p-6 md:p-10 rounded-lg hover:shadow-xl transition">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-ielts-dark mb-2">Flexible Learning</h3>
+                        <p class="text-gray-600">Online or In-person</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-700 mb-4">Choose between online classes or face-to-face sessions based on your preference and schedule.</p>
+                        <a href="courses.html" class="text-ielts-red font-bold hover:underline">EXPLORE COURSE →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Parallax -->
+    <section class="py-16 md:py-32 parallax-section text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Student Success Stories</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 md:p-10 rounded-lg">
+                    <p class="text-lg md:text-xl lg:text-2xl mb-6 italic">"The personalized approach helped me improve from 5.5 to 7.5!"</p>
+                    <p class="font-bold text-base md:text-lg">— Student Name</p>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 md:p-10 rounded-lg">
+                    <p class="text-lg md:text-xl lg:text-2xl mb-6 italic">"I achieved my target score in just 2 months. Highly recommended!"</p>
+                    <p class="font-bold text-base md:text-lg">— Student Name</p>
+                </div>
+            </div>
+            <div class="text-center mt-8 md:mt-12">
+                <a href="success.html" class="text-white font-bold text-lg md:text-xl hover:underline">READ MORE STORIES →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 md:py-24 bg-ielts-dark text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Ready to Begin?</h2>
+            <p class="text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl mx-auto">Book your free consultation today</p>
+            <a href="contact.html" class="bg-ielts-red text-white px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold hover:bg-white hover:text-ielts-red transition inline-block">
+                CONTACT US NOW
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="Logo.png" alt="Right Direction IELTS" class="h-24 md:h-28 mb-4 brightness-0 invert">
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-white transition">Courses</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition">Resources</a></li>
+                        <li><a href="success.html" class="text-gray-400 hover:text-white transition">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>[Phone Number]</li>
+                        <li>[Email]</li>
+                        <li>[Location], Sri Lanka</li>
+                        <li>WhatsApp: [Number]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Right Direction IELTS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2.0"></script>
+    <script>
+        // Change navbar on scroll
+        function updateNavbar() {
+            const navbar = document.getElementById('navbar');
+            const navMenu = document.getElementById('nav-menu');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white');
+                navbar.classList.remove('bg-transparent');
+                // Change desktop menu color (ul element has text-white class)
+                if (navMenu) {
+                    navMenu.classList.remove('text-white');
+                    navMenu.classList.add('text-ielts-dark');
+                }
+                if (menuBtn) {
+                    menuBtn.classList.remove('text-white');
+                    menuBtn.classList.add('text-ielts-dark');
+                }
+            } else {
+                navbar.classList.remove('bg-white');
+                navbar.classList.add('bg-transparent');
+                // Change desktop menu color back to white
+                if (navMenu) {
+                    navMenu.classList.remove('text-ielts-dark');
+                    navMenu.classList.add('text-white');
+                }
+                if (menuBtn) {
+                    menuBtn.classList.remove('text-ielts-dark');
+                    menuBtn.classList.add('text-white');
+                }
+            }
+        }
+
+        // Run on scroll
+        window.addEventListener('scroll', updateNavbar);
+
+        // Run on page load to set initial state
+        updateNavbar();
+
+        // Hide arrow on scroll
+        const heroArrow = document.getElementById('hero-arrow');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                if (heroArrow) {
+                    heroArrow.style.opacity = '0';
+                }
+            } else {
+                if (heroArrow) {
+                    heroArrow.style.opacity = '1';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

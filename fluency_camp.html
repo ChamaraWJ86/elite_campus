@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ELiTE English Fluency Camp — an intensive, immersive English fluency programme at ELiTE English Campus Sri Lanka.">
+    <title>ELiTE English Fluency Camp | ELiTE English Campus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'elite-red':  '#E31837',
+                        'elite-blue': '#000000',
+                        'elite-dark': '#000000',
+                        'elite-gray': '#f5f5f5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { scroll-behavior: smooth; }
+        .nav-scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+        .feature-card { border-left: 4px solid transparent; transition: border-color 0.3s, box-shadow 0.3s; }
+        .feature-card:hover { border-left-color: #E31837; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    </style>
+</head>
+<body class="font-sans">
+
+    <!-- ════════════════════ WHITE STRIP HEADER ════════════════════ -->
+    <div class="fixed top-0 left-0 w-full bg-white z-50 shadow-sm overflow-visible" style="height: 96px;" id="topbar">
+        <div class="container mx-auto px-6 h-full flex items-center justify-between">
+
+            <a href="index.html" class="bg-white block">
+                <img src="elite_logo.jpg" alt="ELiTE English Campus"
+                     class="h-40 md:h-48 bg-white"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span style="display:none; color:#000000;" class="text-2xl font-black tracking-tight">
+                    <span style="color:#E31837;">EL</span>i<span style="color:#E31837;">TE</span>
+                    <span class="font-light ml-1">English Campus</span>
+                </span>
+            </a>
+
+            <ul id="nav-menu" class="hidden md:flex space-x-8 font-semibold" style="color:#000000;">
+                <li><a href="index.html"              class="hover:text-elite-red transition" style="color:#000000;">Home</a></li>
+                <li><a href="index.html#courses"      class="hover:text-elite-red transition" style="color:#000000;">Courses</a></li>
+                <li><a href="index.html#about"        class="hover:text-elite-red transition" style="color:#000000;">About</a></li>
+                <li><a href="index.html#testimonials" class="hover:text-elite-red transition" style="color:#000000;">Success</a></li>
+                <li><a href="index.html#contact"      class="hover:text-elite-red transition" style="color:#000000;">Contact</a></li>
+            </ul>
+
+            <button id="mobile-menu-btn" class="md:hidden" style="color:#000000;">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <ul id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-1 shadow-lg">
+            <li><a href="index.html"              class="block py-2 font-semibold hover:text-elite-red transition" style="color:#000000;">Home</a></li>
+            <li><a href="index.html#courses"      class="block py-2 hover:text-elite-red transition text-gray-700">Courses</a></li>
+            <li><a href="index.html#about"        class="block py-2 hover:text-elite-red transition text-gray-700">About</a></li>
+            <li><a href="index.html#testimonials" class="block py-2 hover:text-elite-red transition text-gray-700">Success</a></li>
+            <li><a href="index.html#contact"      class="block py-2 hover:text-elite-red transition text-gray-700">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ════════════════════ PAGE HERO ════════════════════ -->
+    <section class="pt-48 pb-20 text-white" style="margin-top: 96px; background: linear-gradient(rgba(0,0,0,0.6), rgba(227,24,55,0.7)); background-color: #1a1a1a;">
+        <div class="container mx-auto px-6">
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight">
+                ELiTE English<br>Fluency Camp
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl max-w-2xl font-light leading-relaxed text-white">
+                An intensive, immersive experience designed to break barriers and unlock natural English fluency — fast.
+            </p>
+            <a href="#enrol"
+               class="mt-10 inline-block bg-white text-elite-red px-10 py-4 rounded-lg text-lg font-bold hover:bg-elite-red hover:text-white transition">
+                RESERVE YOUR PLACE
+            </a>
+        </div>
+    </section>
+
+    <!-- ════════════════════ OVERVIEW ════════════════════ -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-sm font-semibold text-elite-red uppercase tracking-widest mb-3">About This Programme</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-elite-dark mb-6">Immersive. Intensive. Transformative.</h2>
+                    <p class="text-gray-700 text-lg mb-4 leading-relaxed">
+                        The ELiTE English Fluency Camp is our flagship intensive programme — a structured, high-energy environment where students are immersed in English from day one. Through real-world activities, guided conversations, and expert coaching, you'll make months of progress in a matter of weeks.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        This is not a traditional classroom. It's an experience designed to push you out of your comfort zone and into natural, confident English fluency.
+                    </p>
+                </div>
+                <div class="bg-elite-gray rounded-lg p-10 text-center">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-4xl font-bold text-elite-red mb-1">[X]</p>
+                            <p class="text-gray-600 font-semibold text-sm">Days Intensive</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-elite-red mb-1">[X]</p>
+                            <p class="text-gray-600 font-semibold text-sm">Hours / Day</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-elite-red mb-1">[X]</p>
+                            <p class="text-gray-600 font-semibold text-sm">Max Participants</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-elite-red mb-1">Live</p>
+                            <p class="text-gray-600 font-semibold text-sm">In-Person Camp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════ WHAT'S INCLUDED ════════════════════ -->
+    <section class="py-16 md:py-24 bg-elite-gray">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-elite-dark mb-4">What's Included</h2>
+                <div class="w-20 h-1 bg-elite-red mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="feature-card bg-white rounded-lg p-8">
+                    <div class="w-12 h-12 bg-elite-red rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-elite-dark mb-2">Intensive Speaking Sessions</h3>
+                    <p class="text-gray-600 leading-relaxed">Back-to-back structured speaking activities, debates, role plays, and presentations to maximise active speaking time every day.</p>
+                </div>
+
+                <div class="feature-card bg-white rounded-lg p-8">
+                    <div class="w-12 h-12 bg-elite-red rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-elite-dark mb-2">Expert Coaching & Feedback</h3>
+                    <p class="text-gray-600 leading-relaxed">Personalised feedback from expert instructors on pronunciation, grammar, vocabulary, and communication style throughout the camp.</p>
+                </div>
+
+                <div class="feature-card bg-white rounded-lg p-8">
+                    <div class="w-12 h-12 bg-elite-red rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-elite-dark mb-2">Real-World Activities</h3>
+                    <p class="text-gray-600 leading-relaxed">Immersive scenarios that simulate real-life situations — interviews, social conversations, negotiations, and public speaking.</p>
+                </div>
+
+                <div class="feature-card bg-white rounded-lg p-8">
+                    <div class="w-12 h-12 bg-elite-red rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-elite-dark mb-2">Study Materials & Resources</h3>
+                    <p class="text-gray-600 leading-relaxed">All course materials, vocabulary guides, and practice resources included — everything you need to continue improving after the camp.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════ WHO IT'S FOR ════════════════════ -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-elite-dark mb-4">Who Is This For?</h2>
+            <div class="w-20 h-1 bg-elite-red mx-auto mb-12"></div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 border border-gray-200 rounded-lg">
+                    <p class="text-4xl mb-4">🚀</p>
+                    <h3 class="font-bold text-elite-dark mb-2">Fast Learners</h3>
+                    <p class="text-gray-600 text-sm">Who want rapid, measurable improvement in a short period of time</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded-lg">
+                    <p class="text-4xl mb-4">🎯</p>
+                    <h3 class="font-bold text-elite-dark mb-2">Goal-Driven Students</h3>
+                    <p class="text-gray-600 text-sm">With a specific deadline — a job interview, overseas move, or academic goal</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded-lg">
+                    <p class="text-4xl mb-4">💡</p>
+                    <h3 class="font-bold text-elite-dark mb-2">Breakthrough Seekers</h3>
+                    <p class="text-gray-600 text-sm">Who've plateaued with traditional learning and need an immersive push</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════ ENROL CTA ════════════════════ -->
+    <section id="enrol" class="py-16 md:py-24 text-white text-center" style="background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(227,24,55,0.7)); background-color: #1a1a1a;">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Ready to Transform Your English?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-red-100">
+                Places are limited. Get in touch now to find out about the next intake dates.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:[Phone Number]"
+                   class="bg-white text-elite-red px-10 py-4 rounded-lg text-lg font-bold hover:bg-black hover:text-white transition inline-block">
+                    CALL US NOW
+                </a>
+                <a href="https://wa.me/[WhatsApp Number]" target="_blank" rel="noopener noreferrer"
+                   class="border-2 border-white text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-white hover:text-elite-red transition inline-block">
+                    WHATSAPP US
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════ FOOTER ════════════════════ -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="elite_logo.jpg" alt="ELiTE English Campus"
+                         class="h-20 md:h-24 mb-4 brightness-0 invert"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <p style="display:none;" class="text-xl font-black text-white">
+                        <span class="text-elite-red">EL</span>i<span class="text-elite-red">TE</span>
+                        <span class="block font-light text-sm mt-1">English Campus</span>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Programmes</h4>
+                    <ul class="space-y-2">
+                        <li><a href="suneetha_ielts/index.html" class="text-gray-400 hover:text-white transition">IELTS Training</a></li>
+                        <li><a href="polish_english.html" class="text-gray-400 hover:text-white transition">Polish English Speaking</a></li>
+                        <li><a href="fluency_camp.html" class="text-gray-400 hover:text-white transition">ELiTE Fluency Camp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>[Phone Number]</li>
+                        <li>[Email]</li>
+                        <li>[Location], Sri Lanka</li>
+                        <li>WhatsApp: [Number]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 ELiTE English Campus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu    = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+        const topbar = document.getElementById('topbar');
+        window.addEventListener('scroll', () => {
+            topbar.style.boxShadow = window.scrollY > 10 ? '0 2px 16px rgba(0,0,0,0.10)' : '0 1px 4px rgba(0,0,0,0.06)';
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+
+</body>
+</html>

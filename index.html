@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ELiTE English Campus Sri Lanka — IELTS Training, Polish English Speaking, and ELiTE English Fluency Camp.">
+    <title>ELiTE English Campus | Sri Lanka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'elite-red': '#E31837',
+                        'elite-blue': '#000000',
+                        'elite-dark': '#000000',
+                        'elite-gray': '#f5f5f5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { scroll-behavior: smooth; }
+
+        /* ── Hero ── */
+        .hero-fullscreen {
+            height: calc(100vh - 96px);
+            position: relative;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            background-size: cover;
+            background-position: center center;
+        }
+        .hero-fullscreen::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,0,0,0.6), rgba(227,24,55,0.7));
+            z-index: 0;
+        }
+        .hero-content { position: relative; z-index: 1; }
+
+        /* ── Parallax quote strip ── */
+        .parallax-section {
+            position: relative;
+            overflow: hidden;
+        }
+        .parallax-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+            z-index: -1;
+        }
+
+        /* ── Animations ── */
+        .fade-in-up { animation: fadeInUp 1s ease-out; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Course card hover accent line ── */
+        .course-card { border-left: 4px solid transparent; transition: border-color 0.3s, box-shadow 0.3s; }
+        .course-card:hover { border-left-color: #E31837; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+        /* ── Nav shadow on scroll (added via JS) ── */
+        .nav-scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+    </style>
+</head>
+<body class="font-sans">
+
+    <!-- ════════════════════ WHITE STRIP HEADER ════════════════════ -->
+    <div class="fixed top-0 left-0 w-full bg-white z-50 shadow-sm overflow-visible" style="height: 96px;" id="topbar">
+        <div class="container mx-auto px-6 h-full flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="index.html" class="bg-white block">
+                <img src="elite_logo.jpg" alt="ELiTE English Campus"
+                     class="h-40 md:h-48 bg-white"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span style="display:none; color:#000000;"
+                      class="text-2xl font-black tracking-tight">
+                    <span style="color:#E31837;">EL</span>i<span style="color:#E31837;">TE</span>
+                    <span class="font-light ml-1">English Campus</span>
+                </span>
+            </a>
+
+            <!-- Desktop nav links -->
+            <ul id="nav-menu" class="hidden md:flex space-x-8 font-semibold" style="color:#000000;">
+                <li><a href="index.html"    class="hover:text-elite-red transition" style="color:#000000;">Home</a></li>
+                <li><a href="#courses"      class="hover:text-elite-red transition" style="color:#000000;">Courses</a></li>
+                <li><a href="#about"        class="hover:text-elite-red transition" style="color:#000000;">About</a></li>
+                <li><a href="#testimonials" class="hover:text-elite-red transition" style="color:#000000;">Success</a></li>
+                <li><a href="#contact"      class="hover:text-elite-red transition" style="color:#000000;">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger (mobile only) -->
+            <button id="mobile-menu-btn" class="md:hidden" style="color:#000000;">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile dropdown -->
+        <ul id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-1 shadow-lg">
+            <li><a href="index.html"    class="block py-2 font-semibold hover:text-elite-red transition" style="color:#000000;">Home</a></li>
+            <li><a href="#courses"      class="block py-2 hover:text-elite-red transition text-gray-700">Courses</a></li>
+            <li><a href="#about"        class="block py-2 hover:text-elite-red transition text-gray-700">About</a></li>
+            <li><a href="#testimonials" class="block py-2 hover:text-elite-red transition text-gray-700">Success</a></li>
+            <li><a href="#contact"      class="block py-2 hover:text-elite-red transition text-gray-700">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ════════════════════ HERO ════════════════════ -->
+    <section class="hero-fullscreen flex items-end md:items-center justify-start" style="margin-top: 96px;">
+        <div class="hero-content container mx-auto px-6 sm:px-8 pb-48 md:pb-0 text-left fade-in-up">
+            <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-2 leading-none text-white">
+                ELiTE
+            </h1>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-2 text-white">
+                English Campus
+            </h2>
+<p class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 max-w-3xl font-light text-white">
+                Expert English training with personalised guidance
+            </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="hero-content absolute bottom-24 left-1/2 transform -translate-x-1/2">
+            <a href="#courses"
+               class="bg-elite-red text-white px-8 sm:px-12 py-4 sm:py-5
+                      text-base sm:text-xl font-bold hover:bg-elite-dark hover:text-white transition
+                      inline-block whitespace-nowrap rounded-lg">
+                EXPLORE OUR PROGRAMMES
+            </a>
+        </div>
+
+        <!-- Bounce arrow -->
+        <div id="hero-arrow"
+             class="hero-content absolute bottom-10 left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+            <svg class="w-8 h-8 animate-bounce text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ════════════════════ STATS BAR ════════════════════ -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+                <div class="sm:border-r border-gray-200 pb-6 sm:pb-0">
+                    <p class="text-4xl sm:text-5xl font-bold text-elite-red mb-2">500+</p>
+                    <p class="text-gray-600 font-semibold">Students Trained</p>
+                </div>
+                <div class="sm:border-r border-gray-200 pb-6 sm:pb-0">
+                    <p class="text-4xl sm:text-5xl font-bold text-elite-red mb-2">3</p>
+                    <p class="text-gray-600 font-semibold">Expert Programmes</p>
+                </div>
+                <div>
+                    <p class="text-4xl sm:text-5xl font-bold text-elite-red mb-2">95%</p>
+                    <p class="text-gray-600 font-semibold">Success Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════ COURSES ════════════════════ -->
+    <section id="courses" class="py-16 md:py-24 bg-elite-gray">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-elite-dark mb-4">Our Programmes</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    Three pathways to English excellence — choose the one that fits your goals
+                </p>
+                <div class="w-20 h-1 bg-elite-red mx-auto mt-6"></div>
+            </div>
+
+            <div class="space-y-8 max-w-5xl mx-auto">
+
+                <!-- Card 1 — IELTS Training -->
+                <div class="course-card bg-white rounded-lg p-8 md:p-10 grid md:grid-cols-12 gap-6 items-center">
+                    <div class="md:col-span-1 flex justify-start md:justify-center">
+                        <div class="w-14 h-14 bg-elite-red rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0
+                                         3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946
+                                         3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138
+                                         3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806
+                                         3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438
+                                         3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7">
+                        <h3 class="text-2xl md:text-3xl font-bold text-elite-dark mb-2">IELTS Training</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Expert IELTS coaching by Suneetha Govinda — covering all four modules with proven
+                            strategies, full-length mock exams, and personalised feedback to help you achieve
+                            your target band score.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-elite-gray text-gray-700 text-sm px-3 py-1 rounded-full">Academic</span>
+                            <span class="bg-elite-gray text-gray-700 text-sm px-3 py-1 rounded-full">General Training</span>
+                            <span class="bg-elite-gray text-gray-700 text-sm px-3 py-1 rounded-full">One-on-One</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 flex md:justify-end">
+                        <!-- Link to Suneetha's existing IELTS site -->
+                        <a href="suneetha_ielts/index.html"
+                           class="bg-elite-red text-white px-8 py-4 rounded-lg font-bold
+                                  hover:bg-red-700 transition inline-block whitespace-nowrap w-full md:w-auto text-center">
+                            EXPLORE →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 — Polish English Speaking -->
+                <div class="course-card bg-white rounded-lg p-8 md:p-10 grid md:grid-cols-12 gap-6 items-center">
+                    <div class="md:col-span-1 flex justify-start md:justify-center">
+                        <div class="w-14 h-14 bg-elite-red rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863
+                                         0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418
+                                         4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7">
+                        <h3 class="text-2xl md:text-3xl font-bold text-elite-dark mb-2">Polish English Speaking</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Refine your pronunciation, fluency, and confidence in spoken English. Designed for
+                            professionals and students who want to communicate with clarity and precision in
+                            any setting.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-elite-gray text-gray-700 text-sm px-3 py-1 rounded-full">Pronunciation</span>
+                            <span class="bg-elite-gray text-gray-700 text-sm px-3 py-1 rounded-full">Fluency</span>
+                            <span class="bg-elite-gray text-gray-700 text-sm px-3 py-1 rounded-full">Confidence</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 flex md:justify-end">
+                        <a href="polish_english.html"
+                           class="bg-elite-red text-white px-8 py-4 rounded-lg font-bold
+                                  hover:bg-red-700 transition inline-block whitespace-nowrap w-full md:w-auto text-center">
+                            EXPLORE →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 — ELiTE English Fluency Camp -->
+                <div class="course-card bg-white rounded-lg p-8 md:p-10 grid md:grid-cols-12 gap-6 items-center">
+                    <div class="md:col-span-1 flex justify-start md:justify-center">
+                        <div class="w-14 h-14 bg-elite-red rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7">
+                        <h3 class="text-2xl md:text-3xl font-bold text-elite-dark mb-2">ELiTE English Fluency Camp</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            An intensive, immersive English fluency experience. Through structured activities,
+                            real-world conversation practice, and expert guidance, students break through
+                            barriers and unlock natural English fluency.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-elite-gray text-gray-700 text-sm px-3 py-1 rounded-full">Intensive</span>
+                            <span class="bg-elite-gray text-gray-700 text-sm px-3 py-1 rounded-full">Immersive</span>
+                            <span class="bg-elite-gray text-gray-700 text-sm px-3 py-1 rounded-full">Real-World Practice</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 flex md:justify-end">
+                        <a href="fluency_camp.html"
+                           class="bg-elite-red text-white px-8 py-4 rounded-lg font-bold
+                                  hover:bg-red-700 transition inline-block whitespace-nowrap w-full md:w-auto text-center">
+                            EXPLORE →
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Fixed scroll hint — visible when browsing the courses section -->
+    <div id="courses-scroll-hint"
+         class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40 flex flex-col items-center
+                opacity-0 pointer-events-none transition-opacity duration-500">
+        <p class="text-xs font-semibold text-white bg-black bg-opacity-50 px-3 py-1 rounded-full mb-2 tracking-widest uppercase">scroll for more</p>
+        <svg class="w-7 h-7 text-elite-red animate-bounce drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+        </svg>
+    </div>
+
+    <!-- ════════════════════ ABOUT ════════════════════ -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto">
+
+                <!-- Text side -->
+                <div>
+                    <p class="text-sm font-semibold text-elite-red uppercase tracking-widest mb-3">Who We Are</p>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-elite-dark mb-6">
+                        Your Path to English Excellence
+                    </h2>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        ELiTE English Campus is a premier English training institute in Sri Lanka, built on
+                        the belief that every student deserves expert, personalised guidance to reach their
+                        full potential in the English language.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                        From achieving high IELTS band scores to mastering fluent, confident spoken English,
+                        our programmes are designed to deliver real, measurable results.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-elite-red mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414
+                                         L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700 text-lg">Expert, certified instructors</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-elite-red mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414
+                                         L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700 text-lg">Personalised learning plans</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-elite-red mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414
+                                         L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700 text-lg">Proven track record of success</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-elite-red mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414
+                                         L9 10.586 7.707 9.293a1 1 0 001.414 0l4-4z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700 text-lg">Online and in-person options</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual side — gradient block with campus name -->
+                <div class="relative">
+                    <div class="rounded-lg overflow-hidden shadow-2xl"
+                         style="background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); min-height: 420px; display:flex; align-items:center; justify-content:center; border: 1px solid #e5e5e5;">
+                        <!-- Replace this div with an <img> tag once you have a campus/building photo -->
+                        <div class="text-center px-8 py-12">
+                            <p class="text-base uppercase tracking-widest mb-4 text-elite-red">Where excellence begins</p>
+                            <p class="text-6xl md:text-7xl font-black leading-none mb-2">
+                                <span class="text-elite-dark">EL</span><span class="text-elite-red">i</span><span class="text-elite-dark">TE</span>
+                            </p>
+                            <p class="text-2xl md:text-3xl font-light tracking-wide text-gray-600">English Campus</p>
+                            <div class="w-16 h-1 bg-elite-red mx-auto mt-6"></div>
+                            <p class="mt-6 text-gray-500 text-sm">Sri Lanka</p>
+                        </div>
+                    </div>
+                    <!-- Decorative offset block -->
+                    <div class="absolute -bottom-4 -right-4 w-full h-full rounded-lg border-4 border-elite-red opacity-20 -z-10"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════ TESTIMONIALS ════════════════════ -->
+    <section id="testimonials" class="py-16 md:py-32 parallax-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-elite-dark">Student Success Stories</h2>
+                <p class="text-lg text-elite-red">Real results from real students</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white border border-gray-200 p-8 rounded-lg shadow-sm">
+                    <p class="text-lg md:text-xl mb-6 italic leading-relaxed text-gray-700">
+                        "I achieved Band 7.5 in my first attempt thanks to the expert coaching at ELiTE!"
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="font-bold text-elite-dark">— [Student Name]</p>
+                        <p class="text-elite-red text-sm">IELTS Training</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 p-8 rounded-lg shadow-sm">
+                    <p class="text-lg md:text-xl mb-6 italic leading-relaxed text-gray-700">
+                        "My confidence in speaking English has transformed completely after the fluency camp."
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="font-bold text-elite-dark">— [Student Name]</p>
+                        <p class="text-elite-red text-sm">ELiTE Fluency Camp</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 p-8 rounded-lg shadow-sm">
+                    <p class="text-lg md:text-xl mb-6 italic leading-relaxed text-gray-700">
+                        "The Polish English Speaking programme helped me land my dream job interview!"
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="font-bold text-elite-dark">— [Student Name]</p>
+                        <p class="text-elite-red text-sm">Polish English Speaking</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════ CONTACT CTA ════════════════════ -->
+    <section id="contact" class="py-16 md:py-24 text-white text-center" style="background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(227,24,55,0.7)); background-color: #1a1a1a;">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Ready to Begin Your Journey?</h2>
+            <p class="text-lg md:text-xl mb-4 max-w-2xl mx-auto text-red-100">
+                Get in touch and we'll help you choose the right programme for your goals.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
+                <a href="tel:[Phone Number]"
+                   class="bg-white text-elite-red px-10 py-4 rounded-lg text-lg font-bold
+                          hover:bg-black hover:text-white transition inline-block">
+                    CALL US NOW
+                </a>
+                <a href="https://wa.me/[WhatsApp Number]" target="_blank" rel="noopener noreferrer"
+                   class="border-2 border-white text-white px-10 py-4 rounded-lg text-lg font-bold
+                          hover:bg-white hover:text-elite-red transition inline-block">
+                    WHATSAPP US
+                </a>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-red-100">
+                <div>
+                    <p class="font-semibold text-white mb-1">Phone</p>
+                    <p>[Phone Number]</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-white mb-1">Email</p>
+                    <p>[Email Address]</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-white mb-1">Location</p>
+                    <p>[Location], Sri Lanka</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════ FOOTER ════════════════════ -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="elite_logo.jpg" alt="ELiTE English Campus"
+                         class="h-20 md:h-24 mb-4 brightness-0 invert"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <p style="display:none;" class="text-xl font-black text-white">
+                        <span class="text-elite-red">EL</span>i<span class="text-elite-red">TE</span>
+                        <span class="block font-light text-sm mt-1">English Campus</span>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Programmes</h4>
+                    <ul class="space-y-2">
+                        <li><a href="suneetha_ielts/index.html"
+                               class="text-gray-400 hover:text-white transition">IELTS Training</a></li>
+                        <li><a href="#contact"
+                               class="text-gray-400 hover:text-white transition">Polish English Speaking</a></li>
+                        <li><a href="#contact"
+                               class="text-gray-400 hover:text-white transition">ELiTE Fluency Camp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>[Phone Number]</li>
+                        <li>[Email]</li>
+                        <li>[Location], Sri Lanka</li>
+                        <li>WhatsApp: [Number]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 ELiTE English Campus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ════════════════════ SCRIPTS ════════════════════ -->
+    <script>
+        // ── Mobile menu toggle ──
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu    = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // ── Subtle shadow on topbar when scrolled ──
+        const topbar = document.getElementById('topbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                topbar.style.boxShadow = '0 2px 16px rgba(0,0,0,0.10)';
+            } else {
+                topbar.style.boxShadow = '0 1px 4px rgba(0,0,0,0.06)';
+            }
+        });
+
+        // ── Hide bounce arrow on scroll ──
+        const heroArrow = document.getElementById('hero-arrow');
+        window.addEventListener('scroll', () => {
+            heroArrow.style.opacity = window.scrollY > 50 ? '0' : '1';
+        });
+
+        // ── Courses scroll hint: show when in courses section, hide when last card is visible ──
+        const scrollHint = document.getElementById('courses-scroll-hint');
+        const coursesSection = document.getElementById('courses');
+        const courseCards = document.querySelectorAll('.course-card');
+
+        if (scrollHint && coursesSection && courseCards.length > 0) {
+            const lastCard = courseCards[courseCards.length - 1];
+            let inCoursesSection = false;
+            let lastCardVisible = false;
+
+            const sectionObserver = new IntersectionObserver(entries => {
+                inCoursesSection = entries[0].isIntersecting;
+                updateHint();
+            }, { threshold: 0.05 });
+
+            const lastCardObserver = new IntersectionObserver(entries => {
+                lastCardVisible = entries[0].isIntersecting;
+                updateHint();
+            }, { threshold: 0.4 });
+
+            function updateHint() {
+                const show = inCoursesSection && !lastCardVisible;
+                scrollHint.style.opacity = show ? '1' : '0';
+                scrollHint.style.pointerEvents = show ? 'auto' : 'none';
+            }
+
+            sectionObserver.observe(coursesSection);
+            lastCardObserver.observe(lastCard);
+        }
+
+        // ── Smooth scroll for anchor links ──
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
