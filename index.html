@@ -37,10 +37,10 @@
             position: absolute;
             inset: 0;
             background-image:
-                linear-gradient(rgba(0,0,0,0.6), rgba(227,24,55,0.7));
-            z-index: 0;
+                linear-gradient(rgba(0,0,0,0.55), rgba(227,24,55,0.75));
+            z-index: 1;
         }
-        .hero-content { position: relative; z-index: 1; }
+        .hero-content { position: relative; z-index: 2; }
 
         /* ── Parallax quote strip ── */
         .parallax-section {
@@ -120,10 +120,15 @@
     <!-- ════════════════════ HERO ════════════════════ -->
     <section class="hero-fullscreen relative overflow-hidden" style="margin-top: 96px;">
 
-        <!-- Left: text content -->
+        <!-- Background photo -->
+        <img src="hero_photo.png" alt="" aria-hidden="true"
+             class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
+             style="z-index: 0;">
+
+        <!-- Text content -->
         <div class="hero-content absolute inset-0 flex items-center">
             <div class="container mx-auto px-6 sm:px-8">
-                <div class="max-w-lg xl:max-w-2xl fade-in-up">
+                <div class="fade-in-up">
                     <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-2 leading-none text-white">
                         ELiTE
                     </h1>
@@ -141,14 +146,6 @@
                     </a>
                 </div>
             </div>
-        </div>
-
-        <!-- Right: cutout photo -->
-        <div class="hero-content absolute bottom-0 right-0 md:right-8 lg:right-16 xl:right-24
-                    hidden md:flex items-end pointer-events-none">
-            <img src="hero_photo.png" alt="ELiTE English Campus"
-                 class="h-[65vh] max-h-[580px] object-contain object-bottom
-                        drop-shadow-2xl select-none">
         </div>
 
         <!-- Bounce arrow -->
