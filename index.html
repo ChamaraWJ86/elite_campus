@@ -118,32 +118,42 @@
     </div>
 
     <!-- ════════════════════ HERO ════════════════════ -->
-    <section class="hero-fullscreen flex items-end md:items-center justify-start" style="margin-top: 96px;">
-        <div class="hero-content container mx-auto px-6 sm:px-8 pb-48 md:pb-0 text-left fade-in-up">
-            <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-2 leading-none text-white">
-                ELiTE
-            </h1>
-            <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-2 text-white">
-                English Campus
-            </h2>
-<p class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 max-w-3xl font-light text-white">
-                Expert English training with personalised guidance
-            </p>
+    <section class="hero-fullscreen relative overflow-hidden" style="margin-top: 96px;">
+
+        <!-- Left: text content -->
+        <div class="hero-content absolute inset-0 flex items-center">
+            <div class="container mx-auto px-6 sm:px-8">
+                <div class="max-w-lg xl:max-w-2xl fade-in-up">
+                    <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-2 leading-none text-white">
+                        ELiTE
+                    </h1>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white">
+                        English Campus
+                    </h2>
+                    <p class="text-lg sm:text-xl md:text-2xl mb-10 font-light text-white">
+                        Expert English training with personalised guidance
+                    </p>
+                    <a href="#courses"
+                       class="bg-elite-red text-white px-8 sm:px-12 py-4 sm:py-5
+                              text-base sm:text-xl font-bold hover:bg-white hover:text-elite-red transition
+                              inline-block whitespace-nowrap rounded-lg">
+                        EXPLORE OUR PROGRAMMES
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <!-- CTA -->
-        <div class="hero-content absolute bottom-24 left-1/2 transform -translate-x-1/2">
-            <a href="#courses"
-               class="bg-elite-red text-white px-8 sm:px-12 py-4 sm:py-5
-                      text-base sm:text-xl font-bold hover:bg-elite-dark hover:text-white transition
-                      inline-block whitespace-nowrap rounded-lg">
-                EXPLORE OUR PROGRAMMES
-            </a>
+        <!-- Right: cutout photo -->
+        <div class="hero-content absolute bottom-0 right-0 md:right-8 lg:right-16 xl:right-24
+                    hidden md:flex items-end pointer-events-none">
+            <img src="hero_photo.png" alt="ELiTE English Campus"
+                 class="h-[65vh] max-h-[580px] object-contain object-bottom
+                        drop-shadow-2xl select-none">
         </div>
 
         <!-- Bounce arrow -->
         <div id="hero-arrow"
-             class="hero-content absolute bottom-10 left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+             class="hero-content absolute bottom-6 left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
             <svg class="w-8 h-8 animate-bounce text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
