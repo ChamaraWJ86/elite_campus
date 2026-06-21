@@ -29,8 +29,10 @@
             position: relative;
             overflow: hidden;
             background-color: #1a1a1a;
-            background-size: cover;
-            background-position: center center;
+            background-image: url('hero_photo.png');
+            background-size: 55% auto;
+            background-position: center top;
+            background-repeat: no-repeat;
         }
         .hero-fullscreen::before {
             content: '';
@@ -38,9 +40,9 @@
             inset: 0;
             background-image:
                 linear-gradient(rgba(0,0,0,0.55), rgba(227,24,55,0.75));
-            z-index: 1;
+            z-index: 0;
         }
-        .hero-content { position: relative; z-index: 2; }
+        .hero-content { position: relative; z-index: 1; }
 
         /* ── Parallax quote strip ── */
         .parallax-section {
@@ -119,11 +121,6 @@
 
     <!-- ════════════════════ HERO ════════════════════ -->
     <section class="hero-fullscreen relative overflow-hidden" style="margin-top: 96px;">
-
-        <!-- Background photo -->
-        <img src="hero_photo.png" alt="" aria-hidden="true"
-             class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
-             style="z-index: 0;">
 
         <!-- Text content -->
         <div class="hero-content absolute inset-0 flex items-center">
